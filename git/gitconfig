@@ -1,0 +1,27 @@
+[user]
+	name = Sam Neely
+	email = sneely@samneely.org
+[core]
+	editor = vim
+	excludesfile = /Users/samneely/.gitignore
+[push]
+	default = tracking
+[pull]
+	default = simple
+	rebase = true
+[alias]
+	pretty-log = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	st = status
+	co = checkout
+	br = branch
+	a = add
+	rb = rebase
+	cm = commit
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/samneely/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color]
+	ui = auto

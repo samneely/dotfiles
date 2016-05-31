@@ -1,0 +1,5 @@
+# Load rbenv
+eval "$(rbenv init -)"
+
+# Load Nodenv
+eval "$(nodenv init -)"

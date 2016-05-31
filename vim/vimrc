@@ -1,0 +1,74 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+"""""" Ruby
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
+Plugin 'thoughtbot/vim-rspec'
+
+"""""" JavaScript
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx' ""Requires pangloss/vim-javascript
+Plugin 'kchmck/vim-coffee-script'
+
+"""""" Web
+Plugin 'tpope/vim-haml'
+Plugin 'slim-template/vim-slim'
+
+"""""" Git
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+"""""" Vim
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'L9' ""Required for FuzzyFinder
+Plugin 'FuzzyFinder'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'ervandew/supertab'
+Plugin 'tomasr/molokai'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'AndrewRadev/splitjoin.vim'
+
+call vundle#end()
+
+"""""" Config
+
+filetype plugin indent on
+syntax on
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2 number
+set mouse=a
+set cc=80
+set hlsearch
+
+"""""" Color Config
+colorscheme molokai
+let g:molokai_original = 1
+
+"""""" vim-rspec Config
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_runner = "os_x_iterm"
+let g:rspec_command = "be rspec {spec}"
+
+"""""" Indent Config
+"let g:indent_guides_start_level = 2
+
+  "" shortcut to rapidly toggle 'set list'
+  "nmap <leader>l :set list!<CR>
+
+  "" use the same symbols as TextMate for tabstops and EOLs
+  "set listchars=tab:▸\ ,eol:¬
