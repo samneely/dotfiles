@@ -11,7 +11,10 @@ plugins=(git ruby rails)
 source $ZSH/oh-my-zsh.sh
 
 # PATH for Homebrew
-export PATH="$PATH:/usr/local/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin"
+export PATH="$PATH:/usr/local/sbin"
+
+# PATH for Postgres
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 # Aliases
 source ~/.aliases
