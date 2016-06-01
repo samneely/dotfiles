@@ -17,6 +17,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx' ""Requires pangloss/vim-javascript
 Plugin 'kchmck/vim-coffee-script'
 
+"""""" Elixir
+Plugin 'elixir-lang/vim-elixir'
+
 """""" Web
 Plugin 'tpope/vim-haml'
 Plugin 'slim-template/vim-slim'
