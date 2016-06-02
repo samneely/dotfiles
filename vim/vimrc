@@ -43,6 +43,14 @@ Plugin 'AndrewRadev/splitjoin.vim'
 
 call vundle#end()
 
+"""""" vim-rspec Config
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_runner = "os_x_iterm2"
+let g:rspec_command = "be rspec {spec}"
+
 """""" Config
 
 filetype plugin indent on
@@ -54,18 +62,15 @@ set softtabstop=2 number
 set mouse=a
 set cc=80
 set hlsearch
+set guifont=Menlo:h12
 
 """""" Color Config
 colorscheme molokai
 let g:molokai_original = 1
 
-"""""" vim-rspec Config
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm2"
-let g:rspec_command = "be rspec {spec}"
+"""""" Local project config
+set exrc
+set secure
 
 """""" Indent Config
 "let g:indent_guides_start_level = 2
