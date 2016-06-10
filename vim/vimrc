@@ -52,6 +52,9 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm2"
 let g:rspec_command = "be rspec {spec}"
 
+"""""" ctrl-p config
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|bower_components|node_modules|tmp|_build'
+
 """""" Config
 
 filetype plugin indent on
