@@ -25,3 +25,5 @@
 	trustExitCode = true
 [color]
 	ui = auto
+[diff]
+	compactionHeuristic = true
