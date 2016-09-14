@@ -18,6 +18,9 @@ Plugin 'mxw/vim-jsx' ""Requires pangloss/vim-javascript
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 
+"""""" Ember
+Plugin 'yalesov/vim-emblem'
+
 """""" Elixir
 Plugin 'elixir-lang/vim-elixir'
 
