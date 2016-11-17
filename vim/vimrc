@@ -32,6 +32,7 @@ Plugin 'mattn/emmet-vim'
 """""" Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'jreybert/vimagit'
 
 """""" Vim
 Plugin 'tpope/vim-surround'
