@@ -47,7 +47,8 @@ Plugin 'tomasr/molokai'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'AndrewRadev/splitjoin.vim'
 
-call vundle#end()
+call vundle#end() "required for Vundle
+filetype plugin indent on "required for Vundle
 
 """""" vim-rspec Config
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -61,7 +62,6 @@ let g:rspec_command = "be rspec {spec}"
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|bower_components|node_modules|tmp|_build'
 
 """""" Config
-filetype plugin indent on
 syntax on
 set expandtab
 set tabstop=2
