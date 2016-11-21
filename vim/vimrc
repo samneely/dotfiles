@@ -73,6 +73,14 @@ set cc=80
 set hlsearch
 set guifont=Menlo:h14
 
+"""""" Split config
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
+
 """""" Color Config
 colorscheme molokai
 let g:molokai_original = 1
