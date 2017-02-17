@@ -45,9 +45,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
-Plugin 'tomasr/molokai'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'AndrewRadev/splitjoin.vim'
+
+"""""" Vim - colors
+Plugin 'tomasr/molokai'
+Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end() "required for Vundle
 filetype plugin indent on "required for Vundle
@@ -93,8 +96,11 @@ set splitbelow
 set splitright
 
 """""" Color Config
-colorscheme molokai
-let g:molokai_original = 1
+"colorscheme molokai
+"let g:molokai_original = 1
+set termguicolors
+let ayucolor = 'mirage'
+colorscheme ayu
 
 """""" Local project config
 set exrc
