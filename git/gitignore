@@ -2,3 +2,4 @@
 *.swo
 .vimrc
 production.sql.gz
+.DS_Store
