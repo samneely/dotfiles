@@ -17,6 +17,8 @@
 	a = add
 	rb = rebase
 	cm = commit
+  pf = push --force-with-lease
+  la = !git config -l | grep alias | cut -c 7-
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
