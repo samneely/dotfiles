@@ -18,6 +18,7 @@
 	rb = rebase
 	cm = commit
   pf = push --force-with-lease
+  prune = fetch --prune
   la = !git config -l | grep alias | cut -c 7-
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
