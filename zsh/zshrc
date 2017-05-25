@@ -5,7 +5,6 @@ export ZSH=/Users/samneely/.oh-my-zsh
 source ~/.brewrc
 
 ZSH_THEME="lambda"
-plugins=(git ruby rails)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
