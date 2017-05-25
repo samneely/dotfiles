@@ -48,12 +48,22 @@ Plugin 'ervandew/supertab'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'AndrewRadev/splitjoin.vim'
 
+"""""" Vim - searching/editing
+Plugin 'olical/vim-enmasse' " editing multiple files in buffer
+Plugin 'mileszs/ack.vim'
+Plugin 'terryma/vim-multiple-cursors'
+
 """""" Vim - colors
 Plugin 'tomasr/molokai'
 Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end() "required for Vundle
 filetype plugin indent on "required for Vundle
+
+"""""" Ack.vim config
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+endif
 
 """""" vim-rspec Config
 map <Leader>t :call RunCurrentSpecFile()<CR>
