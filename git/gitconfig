@@ -10,16 +10,23 @@
 	default = simple
 	rebase = true
 [alias]
-	pretty-log = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	st = status
-	co = checkout
-	br = branch
 	a = add
-	rb = rebase
+	br = branch
 	cm = commit
-  pf = push --force-with-lease
-  prune = fetch --prune
+	co = checkout
+  fixup = !sh -c \"git commit --fixup=$1\" -
   la = !git config -l | grep alias | cut -c 7-
+  overview = log --all --oneline --no-merges --since='2 weeks'
+  pf = push --force-with-lease
+  praise = blame
+	pretty-log = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  prune = fetch --prune
+	rb = rebase
+  recap = log --all --oneline --no-merges --author='sneely@samneely.org'
+  recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+	st = status
+  today = log --since=00:00:00 --all --no-merges --oneline --author='sneely@samneely.org'
+  undo = reset --soft HEAD^
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
