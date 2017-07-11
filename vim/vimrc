@@ -20,6 +20,9 @@ Plugin 'mxw/vim-jsx' ""Requires pangloss/vim-javascript
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 
+"""""" Vue
+Plugin 'posva/vim-vue'
+
 """""" Ember
 Plugin 'yalesov/vim-emblem'
 
