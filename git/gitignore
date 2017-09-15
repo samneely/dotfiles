@@ -1,5 +1,13 @@
+# Vim
 *.swp
 *.swo
 .vimrc
+
+# Ruby
+.rbenv-gemsets
+
+# Data files
 production.sql.gz
+
+# macOS
 .DS_Store

@@ -3,7 +3,7 @@
 	email = sneely@samneely.org
 [core]
 	editor = vim
-	excludesfile = /Users/samneely/.gitignore
+	excludesfile = ~/.gitignore
 [push]
 	default = tracking
 [pull]
