@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -f Gemfile ]; then
+  echo "Are you sure you're in a Ruby on Rails app?"
+else
+  ln -s "$(pwd)" ~/.puma-dev/"$(basename `pwd`)"
+  puma-dev -install
+  echo "Your app should be available at http://$(basename `pwd`).dev and https://$(basename `pwd`).dev now!"
+fi
