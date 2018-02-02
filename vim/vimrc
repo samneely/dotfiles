@@ -50,6 +50,7 @@ Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'bogado/file-line'
 
 """""" Vim - searching/editing
 Plugin 'olical/vim-enmasse' " editing multiple files in buffer
