@@ -8,3 +8,11 @@ fi
 if [ -x "$(command -v nodenv)" ]; then
   eval "$(nodenv init -)"
 fi
+
+# Load kiex
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
+# Load pyenv
+if [ -x "$(command -v pyenv)" ]; then
+  eval "$(pyenv init -)"
+fi
