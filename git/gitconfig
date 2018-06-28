@@ -27,6 +27,11 @@
   recap = log --all --oneline --no-merges --author='sneely@samneely.org'
   recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
 	st = status
+  tidy = "!f() { \
+          local branch="${1-master}"; \
+          echo "Pruning branches that are already merged into $branch..."; \
+          git remote prune origin && git branch --merged "$branch" | grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn} -v " $branch" | xargs -n 1 git branch -d; \
+          }; f"
   today = log --since=00:00:00 --all --no-merges --oneline --author='sneely@samneely.org'
   undo = reset --soft HEAD^
 [difftool "sourcetree"]
