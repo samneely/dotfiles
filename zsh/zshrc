@@ -1,10 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-
-# Homebrew
-source ~/.brewrc
-
 ZSH_THEME="lambda"
+
+# Auth tokens
+source ~/.tokensrc
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
