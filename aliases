@@ -1,7 +1,3 @@
 alias git="hub"
 alias be="bundle exec"
 alias ll="ls -l"
-
-# McAfee
-alias mcafeestart='sudo /usr/local/McAfee/AntiMalware/VSControl startoas'
-alias mcafeestop='sudo /usr/local/McAfee/AntiMalware/VSControl stopoas'
