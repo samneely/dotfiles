@@ -2,7 +2,7 @@
 	name = Sam Neely
 	email = sneely@samneely.org
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.gitignore
 [push]
 	default = tracking
