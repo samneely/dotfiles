@@ -91,7 +91,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2 number
 set mouse=a
-set cc=80 " Line limit delimiter
+set cc=120 " Line limit delimiter
 set hlsearch
 set guifont=Menlo:h14
 
