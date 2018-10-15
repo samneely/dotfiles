@@ -98,6 +98,9 @@ set guifont=Menlo:h14
 " ALE
 let g:airline#extensions#ale#enabled = 1
 
+" nerdcommenter
+let g:NERDSpaceDelims = 1
+
 " Splits / Grids
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
