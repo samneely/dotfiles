@@ -22,6 +22,7 @@ Plug 'posva/vim-vue', {'for': ['js', 'vue']}
 Plug 'yalesov/vim-emblem', {'for': ['js', 'emblem']} " for Ember.js
 Plug 'elixir-lang/vim-elixir', {'for': ['ex', 'exs']}
 Plug 'mattn/emmet-vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 
