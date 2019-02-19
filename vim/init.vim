@@ -45,7 +45,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'AndrewRadev/splitjoin.vim'
 Plug 'bogado/file-line'
 Plug 'junegunn/vim-easy-align'
 
