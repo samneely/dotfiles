@@ -20,7 +20,6 @@ Plug 'kchmck/vim-coffee-script', {'for': ['js', 'coffee']}
 Plug 'mustache/vim-mustache-handlebars', {'for': ['js', 'handlebars']}
 Plug 'digitaltoad/vim-jade', {'for': 'pug'}
 Plug 'posva/vim-vue', {'for': ['js', 'vue']}
-Plug 'yalesov/vim-emblem', {'for': ['js', 'emblem']} " for Ember.js
 Plug 'elixir-lang/vim-elixir', {'for': ['ex', 'exs']}
 Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
