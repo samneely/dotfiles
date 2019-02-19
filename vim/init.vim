@@ -47,6 +47,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'bogado/file-line'
 Plug 'junegunn/vim-easy-align'
 
+" Markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 " Searching / Editing
 Plug 'olical/vim-enmasse' " editing multiple files in buffer
 Plug 'mileszs/ack.vim'
