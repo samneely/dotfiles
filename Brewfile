@@ -18,8 +18,6 @@ brew "openssl"
 brew "git"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # The mind to rule processes of your development environment
 brew "hivemind"
 # Add GitHub support to git on the command-line
