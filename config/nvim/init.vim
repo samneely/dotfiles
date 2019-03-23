@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': ['ruby', 'erb', 'slim', 'haml']}
-Plug 'thoughtbot/vim-rspec', {'for': ['ruby', 'spec']}
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-haml', {'for': 'haml'}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
@@ -23,7 +22,7 @@ Plug 'posva/vim-vue', {'for': ['js', 'vue']}
 Plug 'elixir-lang/vim-elixir', {'for': ['ex', 'exs']}
 Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
+Plug 'janko-m/vim-test'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 
 " Git
@@ -66,12 +65,13 @@ if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif
 
-" vim-rspec Config
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = ":!bundle exec rspec {spec}"
+" vim-test
+nmap <silent> <Leader>s :TestNearest<CR>
+nmap <silent> <Leader>t :TestFile<CR>
+nmap <silent> <Leader>a :TestSuite<CR>
+nmap <silent> <Leader>l :TestLast<CR>
+nmap <silent> <Leader>g :TestVisit<CR>
+let test#javascript#jest#executable = 'yarn test:debug'
 
 " vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
