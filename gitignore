@@ -2,6 +2,7 @@
 *.swp
 *.swo
 .vimrc
+Session.vim
 
 # Ruby
 .rbenv-gemsets
