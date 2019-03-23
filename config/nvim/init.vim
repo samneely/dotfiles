@@ -5,7 +5,7 @@ set t_Co=256
 " Initialize
 "==================================
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': ['ruby', 'erb', 'slim', 'haml']}
