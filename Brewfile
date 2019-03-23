@@ -1,7 +1,12 @@
+tap "caskroom/cask"
+tap "caskroom/versions"
+tap "eddieantonio/eddieantonio"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "puma/puma"
+tap "thoughtbot/formulae"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -24,6 +29,8 @@ brew "hivemind"
 brew "hub"
 # Generic library support script
 brew "libtool"
+# Library for command-line editing
+brew "readline"
 # YAML Parser
 brew "libyaml"
 # High performance, distributed memory object caching system
@@ -38,8 +45,6 @@ brew "tmux"
 brew "overmind"
 # Manage compile and link flags for libraries
 brew "pkg-config"
-# Library for command-line editing
-brew "readline"
 # Object-relational database system
 brew "postgresql@9.6", restart_service: true
 # Messaging broker
@@ -60,4 +65,9 @@ brew "yarn"
 brew "zsh"
 # Additional completion definitions for zsh
 brew "zsh-completions"
+# It's like cat(1), but for images.
+brew "eddieantonio/eddieantonio/imgcat"
+# management suite for dotfiles
+brew "thoughtbot/formulae/rcm"
 cask "chromedriver"
+cask "ngrok"
