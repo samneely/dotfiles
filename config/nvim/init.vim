@@ -71,7 +71,6 @@ nmap <silent> <Leader>t :TestFile<CR>
 nmap <silent> <Leader>a :TestSuite<CR>
 nmap <silent> <Leader>l :TestLast<CR>
 nmap <silent> <Leader>g :TestVisit<CR>
-let test#javascript#jest#executable = 'yarn test:debug'
 
 " vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
