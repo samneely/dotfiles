@@ -8,6 +8,8 @@ source ~/.tokensrc
 # User configuration
 source $ZSH/oh-my-zsh.sh
 
+export EDITOR=nvim
+
 # PATH for Homebrew
 export PATH="$PATH:/usr/local/sbin"
 
