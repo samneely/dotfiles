@@ -2,11 +2,11 @@
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="lambda"
 
-# Auth tokens
-source ~/.tokensrc
-
 # User configuration
 source $ZSH/oh-my-zsh.sh
+
+# Auth tokens
+source ~/.tokensrc
 
 export EDITOR=nvim
 
