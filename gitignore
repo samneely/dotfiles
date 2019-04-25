@@ -12,3 +12,6 @@ production.sql.gz
 
 # macOS
 .DS_Store
+
+# Development environments
+.overmind.env
