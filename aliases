@@ -1,3 +1,4 @@
 alias git="hub"
 alias be="bundle exec"
 alias ll="ls -l"
+alias listening="lsof -iTCP -sTCP:LISTEN -n -P"
