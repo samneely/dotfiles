@@ -30,3 +30,7 @@ if [ -d ~/.asdf ]; then
   . $HOME/.asdf/asdf.sh
   . $HOME/.asdf/completions/asdf.bash
 fi
+
+# PATH for Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
