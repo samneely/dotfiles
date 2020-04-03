@@ -14,7 +14,7 @@ Plug 'tpope/vim-haml', {'for': 'haml'}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 Plug 'pangloss/vim-javascript', {'for': ['js', 'jsx']}
-Plug 'mxw/vim-jsx', {'for': ['js', 'jsx']} " Requires pangloss/vim-javascript
+Plug 'maxmellon/vim-jsx-pretty', {'for': ['js', 'jsx']}
 Plug 'kchmck/vim-coffee-script', {'for': ['js', 'coffee']}
 Plug 'mustache/vim-mustache-handlebars', {'for': ['js', 'handlebars']}
 Plug 'digitaltoad/vim-jade', {'for': 'pug'}
