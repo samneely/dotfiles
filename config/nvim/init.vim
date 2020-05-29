@@ -24,6 +24,7 @@ Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'janko-m/vim-test'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+Plug 'styled-components/vim-styled-components', {'branch': 'main', 'for': ['js', 'jsx']}
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -103,6 +104,8 @@ set guifont=Menlo:h14
 
 " ALE
 let g:airline#extensions#ale#enabled = 1
+let g:ale_linters = {'ruby': ['standardrb']}
+let g:ale_fixers = {'ruby': ['standardrb']}
 
 " coc.nvim
 nmap <silent> gd <Plug>(coc-definition)
