@@ -28,7 +28,6 @@ source ~/.aliases
 # Load asdf
 if [ -d ~/.asdf ]; then
   . $HOME/.asdf/asdf.sh
-  . $HOME/.asdf/completions/asdf.bash
 fi
 
 # PATH for Go
