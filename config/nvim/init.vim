@@ -25,6 +25,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'janko-m/vim-test'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'styled-components/vim-styled-components', {'branch': 'main', 'for': ['js', 'jsx']}
+Plug 'jparise/vim-graphql'
 
 " Git
 Plug 'tpope/vim-fugitive'
