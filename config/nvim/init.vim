@@ -57,9 +57,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'bogado/file-line'
 Plug 'junegunn/vim-easy-align'
 
-" LSP support
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
