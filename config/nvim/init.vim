@@ -7,30 +7,41 @@ set t_Co=256
 
 call plug#begin('~/.vim/plugged')
 
+" Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': ['ruby', 'erb', 'slim', 'haml']}
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-haml', {'for': 'haml'}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
+" Elixir
+Plug 'elixir-lang/vim-elixir', {'for': ['ex', 'exs']}
+
+" Golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+
+" Frontend
 Plug 'pangloss/vim-javascript', {'for': ['js', 'jsx']}
 Plug 'maxmellon/vim-jsx-pretty', {'for': ['js', 'jsx']}
 Plug 'kchmck/vim-coffee-script', {'for': ['js', 'coffee']}
-Plug 'mustache/vim-mustache-handlebars', {'for': ['js', 'handlebars']}
-Plug 'digitaltoad/vim-jade', {'for': 'pug'}
-Plug 'posva/vim-vue', {'for': ['js', 'vue']}
-Plug 'elixir-lang/vim-elixir', {'for': ['ex', 'exs']}
 Plug 'mattn/emmet-vim'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'janko-m/vim-test'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'styled-components/vim-styled-components', {'branch': 'main', 'for': ['js', 'jsx']}
 Plug 'jparise/vim-graphql'
+Plug 'leafgarland/typescript-vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
+
+" Linting and autoformatting
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'w0rp/ale'
+
+" Test
+Plug 'janko-m/vim-test'
 
 " Vim
 Plug 'tpope/vim-repeat'
@@ -40,20 +51,21 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-obsession'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'w0rp/ale'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'bogado/file-line'
 Plug 'junegunn/vim-easy-align'
 
+" LSP support
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
-" Searching / Editing
+" Finding / Searching / Editing
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'olical/vim-enmasse' " editing multiple files in buffer
 Plug 'mileszs/ack.vim'
 Plug 'terryma/vim-multiple-cursors'
