@@ -114,14 +114,16 @@ set guifont=Menlo:h14
 
 " ALE
 let g:airline#extensions#ale#enabled = 1
-let g:ale_linters = {'ruby': ['standardrb']}
-let g:ale_fixers = {'ruby': ['standardrb']}
+let g:ale_linters = {
+      \'ruby': ['standardrb'],
+      \'js': ['prettier', 'eslint'],
+      \'jsx': ['prettier', 'eslint'],
+      \}
+let g:ale_fixers = {
+      \'ruby': ['standardrb'],
+      \'javascript': ['prettier', 'eslint'],
+      \}
 
-" coc.nvim
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
