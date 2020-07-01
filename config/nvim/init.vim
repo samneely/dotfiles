@@ -34,6 +34,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
+" LSP / Completions
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ervandew/supertab'
+
 " Linting and autoformatting
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -52,7 +56,6 @@ Plug 'tpope/vim-obsession'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
-Plug 'ervandew/supertab'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'bogado/file-line'
 Plug 'junegunn/vim-easy-align'
