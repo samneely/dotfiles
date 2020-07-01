@@ -72,10 +72,20 @@ Plug 'ayu-theme/ayu-vim'
 
 call plug#end()
 
-" Ack.vim config
+" Finding / Searching config
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif
+
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+let g:fzf_action = {
+\ 'ctrl-s': 'split',
+\ 'ctrl-v': 'vsplit',
+\ 'ctrl-t': 'tabnew'
+\ }
+nnoremap <c-p> :FZF<cr>
+
 
 " vim-test
 nmap <silent> <Leader>s :TestNearest<CR>
@@ -90,16 +100,6 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-" fzf
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
-let g:fzf_action = {
-\ 'ctrl-s': 'split',
-\ 'ctrl-v': 'vsplit',
-\ 'ctrl-t': 'tabnew'
-\ }
-nnoremap <c-p> :FZF<cr>
 
 " Config
 syntax on
