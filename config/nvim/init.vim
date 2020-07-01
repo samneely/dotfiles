@@ -123,7 +123,7 @@ let g:ale_fixers = {
       \'ruby': ['standardrb'],
       \'javascript': ['prettier', 'eslint'],
       \}
-
+let g:ale_fix_on_save = 1
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
