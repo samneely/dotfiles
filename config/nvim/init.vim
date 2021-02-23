@@ -22,11 +22,11 @@ Plug 'pangloss/vim-javascript', {'for': ['js', 'jsx']}
 Plug 'maxmellon/vim-jsx-pretty', {'for': ['js', 'jsx']}
 Plug 'kchmck/vim-coffee-script', {'for': ['js', 'coffee']}
 Plug 'styled-components/vim-styled-components', {'branch': 'main', 'for': ['js', 'jsx']}
-Plug 'jparise/vim-graphql'
-Plug 'leafgarland/typescript-vim'
+Plug 'jparise/vim-graphql', {'for': ['js', 'jsx', 'ts', 'graphql']}
+Plug 'leafgarland/typescript-vim', {'for': ['js', 'jsx', 'ts']}
 
 " Git
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive', {'on': 'G'}
 Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
@@ -47,9 +47,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-obsession', {'on': 'Obsess'}
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTree'}
 Plug 'bling/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'bogado/file-line'
@@ -62,7 +62,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'olical/vim-enmasse' " editing multiple files in buffer
-Plug 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim', {'on': 'Ack'}
 
 " Themes
 Plug 'ayu-theme/ayu-vim'
