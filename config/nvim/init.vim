@@ -17,17 +17,10 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-haml', {'for': 'haml'}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
-" Elixir
-Plug 'elixir-lang/vim-elixir', {'for': ['ex', 'exs']}
-
-" Golang
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
-
 " Frontend
 Plug 'pangloss/vim-javascript', {'for': ['js', 'jsx']}
 Plug 'maxmellon/vim-jsx-pretty', {'for': ['js', 'jsx']}
 Plug 'kchmck/vim-coffee-script', {'for': ['js', 'coffee']}
-Plug 'mattn/emmet-vim'
 Plug 'styled-components/vim-styled-components', {'branch': 'main', 'for': ['js', 'jsx']}
 Plug 'jparise/vim-graphql'
 Plug 'leafgarland/typescript-vim'
@@ -38,7 +31,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
 " LSP / Completions
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ervandew/supertab'
 
 " Linting and autoformatting
@@ -71,7 +63,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'olical/vim-enmasse' " editing multiple files in buffer
 Plug 'mileszs/ack.vim'
-Plug 'terryma/vim-multiple-cursors'
 
 " Themes
 Plug 'ayu-theme/ayu-vim'
