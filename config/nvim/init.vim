@@ -7,6 +7,9 @@ set t_Co=256
 
 call plug#begin('~/.vim/plugged')
 
+" Debugging Vim
+Plug 'tweekmonster/startuptime.vim'
+
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': ['ruby', 'erb', 'slim', 'haml']}
