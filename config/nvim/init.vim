@@ -90,6 +90,7 @@ nmap <silent> <Leader>t :TestFile<CR>
 nmap <silent> <Leader>a :TestSuite<CR>
 nmap <silent> <Leader>l :TestLast<CR>
 nmap <silent> <Leader>g :TestVisit<CR>
+let g:test#javascript#runner = 'jest'
 
 " vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
