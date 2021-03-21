@@ -19,14 +19,14 @@ Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 " Frontend
 Plug 'pangloss/vim-javascript', {'for': ['js', 'jsx']}
-Plug 'maxmellon/vim-jsx-pretty', {'for': ['js', 'jsx']}
+Plug 'maxmellon/vim-jsx-pretty', {'for': ['js', 'jsx', 'ts', 'tsx']}
 Plug 'kchmck/vim-coffee-script', {'for': ['js', 'coffee']}
-Plug 'styled-components/vim-styled-components', {'branch': 'main', 'for': ['js', 'jsx']}
-Plug 'jparise/vim-graphql', {'for': ['js', 'jsx', 'ts', 'graphql']}
-Plug 'leafgarland/typescript-vim', {'for': ['js', 'jsx', 'ts']}
+Plug 'styled-components/vim-styled-components', {'branch': 'main', 'for': ['js', 'jsx', 'ts', 'tsx']}
+Plug 'jparise/vim-graphql', {'for': ['js', 'jsx', 'ts', 'tsx', 'graphql']}
+Plug 'leafgarland/typescript-vim', {'for': ['ts', 'tsx']}
 
 " Git
-Plug 'tpope/vim-fugitive', {'on': 'G'}
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
@@ -36,7 +36,7 @@ Plug 'ervandew/supertab'
 " Linting and autoformatting
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'for': ['js', 'jsx', 'ts', 'tsx', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'w0rp/ale'
 
 " Test
@@ -116,9 +116,12 @@ let g:ale_linters = {
       \'ruby': ['standardrb'],
       \'js': ['prettier', 'eslint'],
       \'jsx': ['prettier', 'eslint'],
+      \'ts': ['prettier', 'eslint'],
+      \'tsx': ['prettier', 'eslint'],
       \}
 let g:ale_fixers = {
       \'javascript': ['prettier', 'eslint'],
+      \'typescript': ['prettier', 'eslint'],
       \}
 let g:ale_fix_on_save = 1
 
