@@ -34,9 +34,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 
 " Linting and autoformatting
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['js', 'jsx', 'ts', 'tsx', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'w0rp/ale'
 
 " Test
