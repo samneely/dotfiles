@@ -30,8 +30,6 @@ paq 'vim-ruby/vim-ruby'
 paq 'tpope/vim-rails'
 paq 'tpope/vim-haml'
 paq 'slim-template/vim-slim'
----- Elixir
-paq 'elixir-lang/vim-elixir'
 ---- JavaScript / TypeScript / CSS
 paq 'pangloss/vim-javascript'
 paq 'maxmellon/vim-jsx-pretty'
@@ -53,6 +51,7 @@ paq 'tpope/vim-git'
 paq 'tpope/vim-rhubarb'
 
 -- LSP / Completions
+paq 'ervandew/supertab'
 paq 'glepnir/lspsaga.nvim'
 paq 'neovim/nvim-lspconfig'
 paq 'nvim-lua/completion-nvim'
@@ -69,7 +68,7 @@ vim.cmd [[colorscheme ayu]]
 -- statusline
 require('lualine').setup {
   options = {
-    theme = 'ayu'
+    theme = 'ayu_mirage'
   }
 }
 
@@ -163,12 +162,6 @@ local function root_pattern(...)
   end
 end
 
--- LSP / Elixir
-require'lspconfig'.elixirls.setup({
-  cmd = { os.getenv("XDG_CONFIG_HOME") .. "/lsp/elixir-ls/language_server.sh" };
-  on_attach = on_attach
-})
-
 -- LSP / Ruby
 require'lspconfig'.solargraph.setup({
   cmd = { "solargraph", "stdio" },
@@ -185,36 +178,6 @@ require'lspconfig'.solargraph.setup({
 
 -- LSP / TypeScript
 require'lspconfig'.tsserver.setup{}
-
--- LSP / Lua
-local sumneko_root_path = os.getenv("XDG_CONFIG_HOME") .. "/lsp/lua-language-server"
-local sumneko_binary = sumneko_root_path.."/bin/macOS/lua-language-server"
-
-require'lspconfig'.sumneko_lua.setup {
-  cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
-  on_attach = on_attach,
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-        -- Setup your lua path
-        path = vim.split(package.path, ';'),
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = {'vim', 'hs'},
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = {
-          [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-          [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-        },
-      },
-    },
-  },
-}
 
 -- Ruby / Syntax highlighting
 vim.cmd [[autocmd BufNewFile,BufRead,BufReadPost *.survey set filetype=ruby]]
