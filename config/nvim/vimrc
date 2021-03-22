@@ -17,9 +17,16 @@ set expandtab
 " Hud
 set termguicolors
 syntax on
+set ruler
 set colorcolumn=120 " Line limit delimiter
-set relativenumber
 set guifont=Menlo:h14
+
+" Backup Directories
+set backupdir=~/.config/nvim/backups,.
+set directory=~/.config/nvim/swaps,.
+if exists('&undodir')
+  set undodir=~/.config/nvim/undo,.
+endif
 
 " Jump key
 nnoremap ` '
