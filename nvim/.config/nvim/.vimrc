@@ -28,6 +28,10 @@ if exists('&undodir')
   set undodir=~/.config/nvim/undo,.
 endif
 
+" Leader
+let mapleader=','
+let maplocalleader=','
+
 " Jump key
 nnoremap ` '
 nnoremap ' `
