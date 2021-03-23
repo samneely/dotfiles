@@ -27,7 +27,6 @@ paq 'tpope/vim-vinegar'             -- use netrw with style
 -- Syntax
 ---- Ruby
 paq 'vim-ruby/vim-ruby'
-paq 'tpope/vim-rails'
 paq 'tpope/vim-haml'
 paq 'slim-template/vim-slim'
 ---- JavaScript / TypeScript / CSS
