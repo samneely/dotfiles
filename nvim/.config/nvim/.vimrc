@@ -36,6 +36,12 @@ let maplocalleader=','
 nnoremap ` '
 nnoremap ' `
 
+" Turn off search highlight
+nnoremap <localleader>/ :nohlsearch<CR>
+
+" Trim trailing whitespace
+nnoremap <localleader>tw m`:%s/\s\+$//e<CR>:nohlsearch<CR>``
+
 " Change pane
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
