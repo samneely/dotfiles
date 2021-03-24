@@ -18,6 +18,8 @@ set expandtab
 set termguicolors
 syntax on
 set ruler
+set number
+set nowrap
 set colorcolumn=120 " Line limit delimiter
 set guifont=Menlo:h14
 
