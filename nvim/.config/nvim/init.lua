@@ -70,8 +70,12 @@ vim.cmd [[colorscheme ayu]]
 -- statusline
 require('lualine').setup {
   options = {
-    theme = 'ayu_mirage'
-  }
+    icons_enabled = true,
+    theme = 'ayu_mirage',
+  },
+  sections = {
+    lualine_c = { {'filename', full_path = true} },
+  },
 }
 
 vim.o.showmode = false
