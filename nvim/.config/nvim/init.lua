@@ -49,6 +49,9 @@ paq 'tpope/vim-fugitive'
 paq 'tpope/vim-git'
 paq 'tpope/vim-rhubarb'
 
+-- Formatting
+paq 'dense-analysis/ale'
+
 -- LSP / Completions
 paq 'ervandew/supertab'
 paq 'glepnir/lspsaga.nvim'
@@ -100,6 +103,11 @@ end
 vim.api.nvim_set_keymap('n', '<c-p>', ":lua require('telescope.builtin').git_files()<cr>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<localleader><space>', ":lua require('telescope.builtin').buffers()<cr>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<localleader>ww', ":lua _G.searchWiki()<cr>", {noremap = true, silent = true})
+
+-- ALE
+vim.cmd [[let g:ale_linters = {'ruby': ['standardrb'], 'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'eslint']}]]
+vim.cmd [[let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'eslint']}]]
+vim.cmd [[let g:ale_fix_on_save = 1]]
 
 -- LSP LANGUAGE SERVERS
 local on_attach = function(client, bufnr)
@@ -169,7 +177,7 @@ require'lspconfig'.solargraph.setup({
   on_attach = on_attach,
   settings = {
     solargraph = {
-      diagnostics = true,
+      diagnostics = false,
       useBundler = true
     }
   }
