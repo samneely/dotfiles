@@ -22,7 +22,7 @@ paq 'tpope/vim-abolish'             -- rename... could be LSP'd away someday
 paq 'tpope/vim-commentary'          -- easy comments
 paq 'tpope/vim-eunuch'              -- handle missing files and unix-y stuff
 paq 'tpope/vim-repeat'              -- repeat actions
-paq 'tpope/vim-vinegar'             -- use netrw with style
+paq 'scrooloose/nerdtree'
 
 -- Syntax
 ---- Ruby
