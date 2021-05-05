@@ -24,6 +24,10 @@ paq 'tpope/vim-eunuch'              -- handle missing files and unix-y stuff
 paq 'tpope/vim-repeat'              -- repeat actions
 paq 'scrooloose/nerdtree'
 
+-- Editing help
+paq 'tpope/vim-surround'
+paq 'tpope/vim-endwise'
+
 -- Syntax
 ---- Ruby
 paq 'vim-ruby/vim-ruby'
