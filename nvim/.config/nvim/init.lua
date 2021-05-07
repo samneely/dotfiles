@@ -56,15 +56,21 @@ paq 'tpope/vim-rhubarb'
 -- Formatting
 paq 'dense-analysis/ale'
 
+-- Find/Replace everywhere
+paq 'mileszs/ack.vim'
+paq 'olical/vim-enmasse' -- editing multiple files in buffer
+
+-- Fuzzy Finder
+paq 'nvim-telescope/telescope.nvim'
+paq 'nvim-lua/plenary.nvim'
+
 -- LSP / Completions
 paq 'ervandew/supertab'
 paq 'glepnir/lspsaga.nvim'
 paq 'neovim/nvim-lspconfig'
 paq 'nvim-lua/completion-nvim'
 paq 'nvim-lua/lsp_extensions.nvim'
-paq 'nvim-lua/plenary.nvim'
 paq 'nvim-lua/popup.nvim'
-paq 'nvim-telescope/telescope.nvim'
 paq {'nvim-treesitter/nvim-treesitter', hook = ':TSUpdate'}
 
 -- THEME
@@ -100,22 +106,22 @@ vim.api.nvim_set_keymap('n', '<localleader>g', ":TestVisit<cr>", {noremap = true
 vim.cmd [[let g:test#javascript#runner = 'jest']]
 
 -- telescope for finding stuff
-function _G.searchWiki()
-  require('telescope.builtin').find_files {
-    prompt_title = "Search ZK",
-    shorten_path = false,
-    cwd = "~/src/github.com/evantravers/undo-zk/wiki/",
-  }
-end
-
-vim.api.nvim_set_keymap('n', '<c-p>', ":lua require('telescope.builtin').git_files()<cr>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<localleader><space>', ":lua require('telescope.builtin').buffers()<cr>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<localleader>ww', ":lua _G.searchWiki()<cr>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>ff', ":lua require('telescope.builtin').git_files()<cr>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>fg', ":lua require('telescope.builtin').live_grep()<cr>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>fb', ":lua require('telescope.builtin').buffers()<cr>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>fh', ":lua require('telescope.builtin').help_tags()<cr>", {noremap = true, silent = true})
 
 -- ALE
 vim.cmd [[let g:ale_linters = {'ruby': ['standardrb'], 'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'eslint']}]]
 vim.cmd [[let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'eslint']}]]
 vim.cmd [[let g:ale_fix_on_save = 1]]
+
+-- Ack.vim
+vim.cmd([[
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+endif
+]])
 
 -- LSP LANGUAGE SERVERS
 local on_attach = function(client, bufnr)
