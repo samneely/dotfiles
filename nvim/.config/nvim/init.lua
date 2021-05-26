@@ -5,74 +5,83 @@ vim.cmd([[runtime .vimrc]])
 vim.o.icm = 'split'
 
 -- PLUGINS
--- Using paq.nvim
-vim.cmd 'packadd paq-nvim'
-local paq = require('paq-nvim').paq
-paq {'savq/paq-nvim', opt=true}
+vim.cmd [[packadd packer.nvim]]
 
--- Vim startup profiling
-paq 'tweekmonster/startuptime.vim'
+require('packer').startup(function()
+  -- package manager
+  use 'wbthomason/packer.nvim'
+  
+  -- Vim startup profiling
+  use 'tweekmonster/startuptime.vim'
+  
+  -- UI
+  use 'ayu-theme/ayu-vim'
+  use 'editorconfig/editorconfig-vim' -- editorconfig for being polite
+  use 'hoob3rt/lualine.nvim'
+  use 'lewis6991/gitsigns.nvim'       -- gitsigns
+  use 'tpope/vim-abolish'             -- rename... could be LSP'd away someday
+  use 'tpope/vim-commentary'          -- easy comments
+  use 'tpope/vim-eunuch'              -- handle missing files and unix-y stuff
+  use 'tpope/vim-repeat'              -- repeat actions
+  use 'scrooloose/nerdtree'
+  
+  -- Editing help
+  use 'tpope/vim-surround'
+  use 'tpope/vim-endwise'
+  
+  -- Syntax
+  ---- Ruby
+  use 'vim-ruby/vim-ruby'
+  use 'tpope/vim-haml'
+  use 'slim-template/vim-slim'
+  ---- JavaScript / TypeScript / CSS
+  use 'pangloss/vim-javascript'
+  use 'maxmellon/vim-jsx-pretty'
+  use 'kchmck/vim-coffee-script'
+  use 'styled-components/vim-styled-components'
+  use 'leafgarland/typescript-vim'
+  ---- GraphQL
+  use 'jparise/vim-graphql'
+  
+  -- Testing
+  use 'janko-m/vim-test'
+  
+  -- Markdown Preview
+  use {'iamcco/markdown-preview.nvim', run = 'cd app & yarn install'}
+  
+  -- Git
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-git'
+  use 'tpope/vim-rhubarb'
+  
+  -- Formatting
+  use 'sbdchd/neoformat'
+  
+  -- Find/Replace everywhere
+  use 'mileszs/ack.vim'
+  use 'olical/vim-enmasse' -- editing multiple files in buffer
+  
+  -- Fuzzy Finder
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-lua/plenary.nvim'
+  
+  -- LSP / Completions
+  use 'ervandew/supertab'
+  use 'folke/trouble.nvim'
+  use 'glepnir/lspsaga.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/completion-nvim'
+  use 'nvim-lua/lsp_extensions.nvim'
+  use 'nvim-lua/popup.nvim'
+  use {'nvim-treesitter/nvim-treesitter', hook = ':TSUpdate'}
+  
+  -- devicons
+  use 'ryanoasis/vim-devicons'
+  
+end)
 
--- UI
-paq 'ayu-theme/ayu-vim'
-paq 'editorconfig/editorconfig-vim' -- editorconfig for being polite
-paq 'hoob3rt/lualine.nvim'
-paq 'lewis6991/gitsigns.nvim'       -- gitsigns
-paq 'tpope/vim-abolish'             -- rename... could be LSP'd away someday
-paq 'tpope/vim-commentary'          -- easy comments
-paq 'tpope/vim-eunuch'              -- handle missing files and unix-y stuff
-paq 'tpope/vim-repeat'              -- repeat actions
-paq 'scrooloose/nerdtree'
-
--- Editing help
-paq 'tpope/vim-surround'
-paq 'tpope/vim-endwise'
-
--- Syntax
----- Ruby
-paq 'vim-ruby/vim-ruby'
-paq 'tpope/vim-haml'
-paq 'slim-template/vim-slim'
----- JavaScript / TypeScript / CSS
-paq 'pangloss/vim-javascript'
-paq 'maxmellon/vim-jsx-pretty'
-paq 'kchmck/vim-coffee-script'
-paq 'styled-components/vim-styled-components'
-paq 'leafgarland/typescript-vim'
----- GraphQL
-paq 'jparise/vim-graphql'
-
--- Testing
-paq 'janko-m/vim-test'
-
--- Markdown Preview
-paq {'iamcco/markdown-preview.nvim', run = 'cd app & yarn install'}
-
--- Git
-paq 'tpope/vim-fugitive'
-paq 'tpope/vim-git'
-paq 'tpope/vim-rhubarb'
-
--- Formatting
-paq 'sbdchd/neoformat'
-
--- Find/Replace everywhere
-paq 'mileszs/ack.vim'
-paq 'olical/vim-enmasse' -- editing multiple files in buffer
-
--- Fuzzy Finder
-paq 'nvim-telescope/telescope.nvim'
-paq 'nvim-lua/plenary.nvim'
-
--- LSP / Completions
-paq 'ervandew/supertab'
-paq 'folke/trouble.nvim'
-paq 'glepnir/lspsaga.nvim'
-paq 'neovim/nvim-lspconfig'
-paq 'nvim-lua/completion-nvim'
-paq 'nvim-lua/lsp_extensions.nvim'
-paq 'nvim-lua/popup.nvim'
-paq {'nvim-treesitter/nvim-treesitter', hook = ':TSUpdate'}
+vim.o.fileencoding="utf-8"
+vim.o.guifont = "Hack\\ Regular\\ Nerd\\ Font\\ Complete\\ Mono:h14"
 
 -- THEME
 vim.cmd [[let ayucolor = 'mirage']]
