@@ -54,7 +54,7 @@ paq 'tpope/vim-git'
 paq 'tpope/vim-rhubarb'
 
 -- Formatting
-paq 'dense-analysis/ale'
+paq 'sbdchd/neoformat'
 
 -- Find/Replace everywhere
 paq 'mileszs/ack.vim'
@@ -111,10 +111,11 @@ vim.api.nvim_set_keymap('n', '<leader>fg', ":lua require('telescope.builtin').li
 vim.api.nvim_set_keymap('n', '<leader>fb', ":lua require('telescope.builtin').buffers()<cr>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>fh', ":lua require('telescope.builtin').help_tags()<cr>", {noremap = true, silent = true})
 
--- ALE
-vim.cmd [[let g:ale_linters = {'ruby': ['standardrb'], 'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'eslint']}]]
-vim.cmd [[let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'eslint']}]]
-vim.cmd [[let g:ale_fix_on_save = 1]]
+-- Neoformat
+vim.cmd [[autocmd BufWritePre *.js Neoformat]]
+vim.cmd [[autocmd BufWritePre *.jsx Neoformat]]
+vim.cmd [[autocmd BufWritePre *.ts Neoformat]]
+vim.cmd [[autocmd BufWritePre *.tsx Neoformat]]
 
 -- Ack.vim
 vim.cmd([[
