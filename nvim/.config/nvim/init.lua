@@ -221,7 +221,7 @@ require'lspconfig'.solargraph.setup({
 })
 
 -- LSP / TypeScript
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.tsserver.setup({on_attach = on_attach})
 
 -- Ruby / Syntax highlighting
 vim.cmd [[autocmd BufNewFile,BufRead,BufReadPost *.survey set filetype=ruby]]
