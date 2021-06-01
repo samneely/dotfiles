@@ -16,7 +16,7 @@ require('packer').startup(function()
   
   -- UI
   use {
-    'ayu-theme/ayu-vim',
+    'sainnhe/everforest',
     config = function() require('config.colorsettings') end
   }
   use 'editorconfig/editorconfig-vim' -- editorconfig for being polite

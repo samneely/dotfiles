@@ -1,10 +1,15 @@
 require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = 'ayu_mirage',
+    theme = 'everforest',
   },
   sections = {
-    lualine_c = { {'filename', full_path = true} },
+    lualine_c = {
+      {
+        'filename',
+        path = 1 -- 0 = just filename, 1 = relative path, 2 = absolute path
+      }
+    },
   },
 })
 
