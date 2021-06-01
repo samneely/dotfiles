@@ -5,6 +5,7 @@ vim.cmd([[runtime .vimrc]])
 vim.o.icm = 'split'
 
 require('plugins')
+vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 
 vim.o.fileencoding = "utf-8"
 vim.o.guifont = "Hack Regular Nerd Font Complete Mono:h14"

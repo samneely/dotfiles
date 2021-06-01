@@ -113,5 +113,3 @@ require('packer').startup(function()
     config = function() require('config.treesitter') end
   }
 end)
-
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
