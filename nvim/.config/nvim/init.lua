@@ -99,13 +99,13 @@ require('packer').startup(function()
   }
   
   -- LSP / Completions
-  use {
-    'glepnir/lspsaga.nvim',
-    config = function() require('config.lspsaga') end
-  }
+  -- use {
+  --   'glepnir/lspsaga.nvim',
+  --   config = function() require('config.lspsaga') end
+  -- }
   use {
     'neovim/nvim-lspconfig',
-    config = function() require('config.lspserverconfig') end
+    config = function() require('config.lsp_server_config') end
   }
   use {
     'hrsh7th/nvim-compe',
