@@ -103,7 +103,7 @@ require('packer').startup(function()
   use {
     'hrsh7th/nvim-compe',
     requires = {'hrsh7th/vim-vsnip'},
-    config = function() require('config.lspcompletion') end
+    config = function() require('config.lsp_completion') end
   }
 
   use 'nvim-lua/lsp_extensions.nvim'
