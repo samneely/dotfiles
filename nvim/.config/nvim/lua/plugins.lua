@@ -69,11 +69,10 @@ require('packer').startup(function()
   }
   
   -- Find/Replace everywhere
-  -- use :cdo s/OldName/NewName/gc to replace across files
+  -- use ':cdo s/OldName/NewName/gc | update' to replace across files
   -- https://vimtricks.com/p/interactive-replace-across-files/
   use {
     'mileszs/ack.vim',
-    cmd = 'Ack',
     config = function() require('config.ack') end
   }
 
