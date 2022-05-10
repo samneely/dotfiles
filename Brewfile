@@ -7,67 +7,38 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "puma/puma"
 tap "thoughtbot/formulae"
-# Automatic configure script builder
-brew "autoconf"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
+
+brew "autoconf" # Automatic configure script builder
+brew "automake" # Tool for generating GNU Standards-compliant Makefiles
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-# Good-lookin' diffs with diff-highlight and more
-brew "diff-so-fancy"
-# SSL/TLS cryptography library
-brew "openssl"
-# Distributed revision control system
+brew "coreutils" # GNU File, Shell, and Text utilities
+brew "diff-so-fancy" # Good-lookin' diffs with diff-highlight and more
 brew "git"
-# GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
-# The mind to rule processes of your development environment
-brew "hivemind"
-# Add GitHub support to git on the command-line
-brew "hub"
-# Generic library support script
-brew "libtool"
-# Library for command-line editing
-brew "readline"
-# YAML Parser
-brew "libyaml"
-# High performance, distributed memory object caching system
+brew "gnupg" # GNU Pretty Good Privacy (PGP) package
+brew "hivemind" # The mind to rule processes of your development environment
+brew "hub" # Add GitHub support to git on the command-line
+brew "eddieantonio/eddieantonio/imgcat" # It's like cat(1), but for images.
+brew "libtool" # Generic library support script
+brew "libyaml" # YAML Parser
 brew "memcached", restart_service: true
-# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
-# Terminal multiplexer
-brew "tmux"
-# Process manager for Procfile-based applications and tmux
+brew "openssl"
+brew "tmux" # Terminal multiplexer
 brew "overmind"
-# Manage compile and link flags for libraries
-brew "pkg-config"
-# Object-relational database system
-brew "postgresql@9.6", restart_service: true
-# Messaging broker
+brew "pkg-config" # Manage compile and link flags for libraries
 brew "rabbitmq", restart_service: true
-# Persistent key-value database, with built-in net interface
+brew "readline" # Library for command-line editing
 brew "redis", restart_service: true
-# Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Text interface for Git repositories
-brew "tig"
-# CLI tool that moves files or folder to the trash
-brew "trash"
-# Vi 'workalike' with many additional features
+brew "stow"
+brew "tig" # Text interface for Git repositories
+brew "trash" # CLI tool that moves files or folder to the trash
 brew "vim"
-# JavaScript package manager
 brew "yarn"
-# UNIX shell (command interpreter)
 brew "zsh"
-# Additional completion definitions for zsh
 brew "zsh-completions"
-# It's like cat(1), but for images.
-brew "eddieantonio/eddieantonio/imgcat"
-# management suite for dotfiles
-brew "thoughtbot/formulae/rcm"
+
 cask "chromedriver"
 cask "ngrok"
