@@ -15,5 +15,9 @@
 - 1 Password
 - Alfred
 - Dropbox
+- Gifox
+- Postgres.app
+- Rocket
+- Spectacle
 5. Install languages from asdf
 6. Open neovim and install all dependencies

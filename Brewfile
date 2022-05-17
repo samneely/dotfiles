@@ -6,7 +6,6 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "puma/puma"
-tap "thoughtbot/formulae"
 
 brew "autoconf" # Automatic configure script builder
 brew "automake" # Tool for generating GNU Standards-compliant Makefiles
