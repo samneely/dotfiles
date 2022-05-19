@@ -25,11 +25,6 @@ source ~/.aliases
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Load asdf
-if [ -d ~/.asdf ]; then
-  . $HOME/.asdf/asdf.sh
-fi
-
 # PATH for Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
