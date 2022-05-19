@@ -1,12 +1,12 @@
-tap "caskroom/cask"
-tap "caskroom/versions"
 tap "eddieantonio/eddieantonio"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "puma/puma"
 
+brew "asdf" # Programming language version manager
 brew "autoconf" # Automatic configure script builder
 brew "automake" # Tool for generating GNU Standards-compliant Makefiles
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -18,6 +18,7 @@ brew "gnupg" # GNU Pretty Good Privacy (PGP) package
 brew "hivemind" # The mind to rule processes of your development environment
 brew "hub" # Add GitHub support to git on the command-line
 brew "eddieantonio/eddieantonio/imgcat" # It's like cat(1), but for images.
+brew "fzf" # Fuzzy-finder - used for fuzzy searching terminal history
 brew "libtool" # Generic library support script
 brew "libyaml" # YAML Parser
 brew "memcached", restart_service: true
@@ -39,5 +40,13 @@ brew "yarn"
 brew "zsh"
 brew "zsh-completions"
 
+cask "1password"
+cask "alfred"
 cask "chromedriver"
+cask "dropbox"
+cask "gifox"
+cask "iterm2"
 cask "ngrok"
+cask "postico"
+cask "rocket"
+cask "spectacle"
