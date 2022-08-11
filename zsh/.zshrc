@@ -15,7 +15,6 @@ export PATH="$PATH:/usr/local/sbin"
 
 # PATH for Postgres
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-export PATH="$PATH:/usr/local/opt/postgresql@9.6/bin"
 
 # Aliases
 source ~/.aliases
