@@ -61,7 +61,10 @@ require('packer').startup(function()
   }
   
   -- Markdown Preview
-  use {'iamcco/markdown-preview.nvim', run = 'cd app & yarn install'}
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
   
   -- Formatting
   use {
