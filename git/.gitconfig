@@ -5,7 +5,8 @@
 	editor = nvim
 	excludesfile = ~/.gitignore
 [push]
-	default = tracking
+  autoSetupRemote = true
+	default = upstream
 [pull]
 	default = simple
 	rebase = true
