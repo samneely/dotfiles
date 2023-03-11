@@ -12,10 +12,11 @@ require('packer').startup(function()
     'sainnhe/everforest',
     config = function() require('config.colorsettings') end
   }
+  -- use 'kyazdani42/nvim-web-devicons'
   use 'editorconfig/editorconfig-vim' -- editorconfig for being polite
   use {
     'hoob3rt/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    -- requires = {'kyazdani42/nvim-web-devicons', opt = true},
     config = function() require('config.statusline') end
   }
   use 'tpope/vim-abolish'             -- rename... could be LSP'd away someday
@@ -86,7 +87,7 @@ require('packer').startup(function()
   -- Linting
   use {
     'folke/trouble.nvim',
-    requires = {"kyazdani42/nvim-web-devicons", opt = true},
+    -- requires = {"kyazdani42/nvim-web-devicons", opt = true},
     config = function() require('config.trouble') end
   }
   
