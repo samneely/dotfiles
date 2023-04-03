@@ -1,3 +1,4 @@
+tap "1password/tap"
 tap "eddieantonio/eddieantonio"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -19,6 +20,8 @@ brew "hivemind" # The mind to rule processes of your development environment
 brew "hub" # Add GitHub support to git on the command-line
 brew "eddieantonio/eddieantonio/imgcat" # It's like cat(1), but for images.
 brew "fzf" # Fuzzy-finder - used for fuzzy searching terminal history
+brew "imagemagick" # Tools and libraries to manipulate images in many formats (used by Rails ActiveStorage)
+brew "lefthook" # Pre-commit hooks
 brew "libtool" # Generic library support script
 brew "libyaml" # YAML Parser
 brew "memcached", restart_service: true
@@ -41,12 +44,17 @@ brew "zsh"
 brew "zsh-completions"
 
 cask "1password"
+cask "1password-cli"
 cask "alfred"
 cask "chromedriver"
+cask "dash"
+cask "discord"
 cask "dropbox"
 cask "gifox"
 cask "iterm2"
 cask "ngrok"
 cask "postico"
 cask "rocket"
+cask "slack"
 cask "spectacle"
+cask "spotify"
