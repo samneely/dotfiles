@@ -81,8 +81,9 @@ You'll want to manually symlink the rest. These could include:
 - .asdfrc
 - .rspec
 - .rubocop.yml
+- hub (link to ~/.config/hub)
 
-These could potentially be moved to a `stow` package as a directory in the dotfiles.
+Each file should be symlinked to the home directory unless otherwise noted. These could potentially be moved to a `stow` package as a directory in the dotfiles.
 
 ## Configure apps installed using Homebrew
 
