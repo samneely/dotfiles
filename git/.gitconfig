@@ -50,3 +50,5 @@
 	compactionHeuristic = true
 [rerere]
 	enabled = true
+[hub]
+	protocol = ssh
