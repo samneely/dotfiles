@@ -1,9 +1,7 @@
 tap "1password/tap"
 tap "eddieantonio/eddieantonio"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "puma/puma"
 
