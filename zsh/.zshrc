@@ -6,7 +6,7 @@ ZSH_THEME="lambda"
 source $ZSH/oh-my-zsh.sh
 
 # Auth tokens
-source ~/.tokensrc
+[ -f ~/.tokensrc ] && source ~/.tokensrc
 
 export EDITOR=nvim
 
@@ -17,7 +17,7 @@ export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 # Aliases
-source ~/.aliases
+[ -f ~/.aliases ] && source ~/.aliases
 
 # added by travis gem
 [ -f /Users/samneely/.travis/travis.sh ] && source /Users/samneely/.travis/travis.sh
