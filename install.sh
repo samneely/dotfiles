@@ -11,6 +11,16 @@ setup_ohmyzsh() {
   echo "Done setting up oh-my-zsh... ✅"
 }
 
+install_hub() {
+  echo "Installing hub... 🐙"
+  printf "\n"
+
+  apt-get install hub
+
+  printf "\n"
+  echo "Done hub... ✅"
+}
+
 symlink_dotfiles() {
   echo "Symlinking dotfiles... 🖨️"
   printf "\n"
@@ -46,5 +56,6 @@ setup_neovim() {
 }
 
 setup_ohmyzsh
+install_hub
 symlink_dotfiles
 setup_neovim
