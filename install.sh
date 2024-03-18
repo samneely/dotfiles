@@ -1,8 +1,19 @@
 #!/usr/bin/env bash
 
+setup_ohmyzsh() {
+  echo "Setting up oh-my-zsh... 🐚"
+  printf "\n"
+
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  cp -Rsfv ~/dotfiles/zsh/.z* ~/
+
+  printf "\n"
+  echo "Done setting up oh-my-zsh... ✅"
+}
+
 symlink_dotfiles() {
   echo "Symlinking dotfiles... 🖨️"
-  echo "\n"
+  printf "\n"
 
   ln -sfv ~/dotfiles/asdfrc ~/.asdfrc
   ln -sfv ~/dotfiles/aliases ~/.aliases
@@ -13,27 +24,27 @@ symlink_dotfiles() {
   ln -sfv ~/dotfiles/rubocop.yml ~/.rubocop.yml
 
   ln -sfv ~/dotfiles/git/.git* ~/
-  cp -Rsfv ~/dotfiles/nvim/.config/nvim ~/.config/nvim
-  cp -Rsfv ~/dotfiles/zsh/.z* ~/
 
-  echo "\n"
+  printf "\n"
   echo "Done symlinking dotfiles... ✅"
 }
 
 setup_neovim() {
   echo "Installing neovim package manager... 📦"
-  echo "\n"
+  printf "\n"
 
   echo "Cloning packer..."
   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+  cp -Rsfv ~/dotfiles/nvim/.config/nvim ~/.config/nvim
 
   echo "Running :PackerSync in neovim..."
   nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
-  echo "\n"
+  printf "\n"
   echo "Done setting up neovim... 👨🏻‍💻"
 }
 
+setup_ohmyzsh
 symlink_dotfiles
 setup_neovim
