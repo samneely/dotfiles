@@ -33,7 +33,7 @@ symlink_dotfiles() {
   ln -sfv ~/dotfiles/rubocop.yml ~/.rubocop.yml
 
   ln -sfv ~/dotfiles/git/.git* ~/
-  cp -Rsfv ~/dotfiles/zsh/.z* ~/
+  ln -sfv ~/dotfiles/zsh/.z* ~/
 
   printf "\n"
   echo "Done symlinking dotfiles... ✅"
