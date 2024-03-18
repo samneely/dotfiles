@@ -1,9 +1,13 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
-ZSH_THEME="lambda"
+if ! [ $SPIN ] then
+  export ZSH=~/.oh-my-zsh
+  ZSH_THEME="lambda"
+fi
 
 # User configuration
-source $ZSH/oh-my-zsh.sh
+if ! [ $SPIN ] then
+  source $ZSH/oh-my-zsh.sh
+fi
 
 # Auth tokens
 [ -f ~/.tokensrc ] && source ~/.tokensrc

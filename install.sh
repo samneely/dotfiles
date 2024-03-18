@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
-setup_ohmyzsh() {
+install_ohmyzsh() {
   echo "Setting up oh-my-zsh... 🐚"
   printf "\n"
 
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  cp -Rsfv ~/dotfiles/zsh/.z* ~/
 
   printf "\n"
   echo "Done setting up oh-my-zsh... ✅"
@@ -34,6 +33,7 @@ symlink_dotfiles() {
   ln -sfv ~/dotfiles/rubocop.yml ~/.rubocop.yml
 
   ln -sfv ~/dotfiles/git/.git* ~/
+  cp -Rsfv ~/dotfiles/zsh/.z* ~/
 
   printf "\n"
   echo "Done symlinking dotfiles... ✅"
@@ -55,7 +55,10 @@ setup_neovim() {
   echo "Done setting up neovim... 👨🏻‍💻"
 }
 
-setup_ohmyzsh
+if ! [ $SPIN ] then
+  install_ohmyzsh
+fi
+
 install_hub
 symlink_dotfiles
 setup_neovim
