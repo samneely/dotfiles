@@ -14,7 +14,7 @@ install_hub() {
   echo "Installing hub... 🐙"
   printf "\n"
 
-  apt-get install hub
+  sudo apt-get install hub
 
   printf "\n"
   echo "Done hub... ✅"
@@ -55,10 +55,11 @@ setup_neovim() {
   echo "Done setting up neovim... 👨🏻‍💻"
 }
 
-if ! [ $SPIN ]; then
+if [ $SPIN ]; then
+  install_hub
+else
   install_ohmyzsh
 fi
 
-install_hub
 symlink_dotfiles
 setup_neovim
