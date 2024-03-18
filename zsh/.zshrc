@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-if ! [ $SPIN ] then
+if ! [ $SPIN ]; then
   export ZSH=~/.oh-my-zsh
   ZSH_THEME="lambda"
 fi
 
 # User configuration
-if ! [ $SPIN ] then
+if ! [ $SPIN ]; then
   source $ZSH/oh-my-zsh.sh
 fi
 

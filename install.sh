@@ -55,7 +55,7 @@ setup_neovim() {
   echo "Done setting up neovim... 👨🏻‍💻"
 }
 
-if ! [ $SPIN ] then
+if ! [ $SPIN ]; then
   install_ohmyzsh
 fi
 
