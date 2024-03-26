@@ -130,4 +130,9 @@ require('packer').startup(function()
       require('session-lens').setup({})
     end
   }
+
+  -- Spin
+  if vim.env.SPIN == '1' then
+    use 'Shopify/spin-hud'
+  end
 end)
