@@ -26,7 +26,6 @@
 	pretty-log = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
   prune = fetch --prune
 	rb = rebase
-  recap = log --all --oneline --no-merges --author='sam.neely@proton.me'
   recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
 	st = status
   tidy = "!f() { \
@@ -37,7 +36,6 @@
           echo "Pruning branches that are already merged into $branch..."; \
           git remote prune origin && git branch --merged "$branch" | grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn} -v " $branch" | xargs -n 1 git branch -d; \
           }; f"
-  today = log --since=00:00:00 --all --no-merges --oneline --author='sam.neely@proton.me'
   undo = reset --soft HEAD^
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
