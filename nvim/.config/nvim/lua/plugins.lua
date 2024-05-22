@@ -133,6 +133,11 @@ require('packer').startup(function()
 
   -- Spin
   if vim.env.SPIN == '1' then
+    use 'catlee/spin-clipboard.nvim'
     use 'Shopify/spin-hud'
+    use {
+      'Shopify/spin-nvim',
+      requires = { 'nvim-lua/plenary.nvim' },
+    }
   end
 end)
