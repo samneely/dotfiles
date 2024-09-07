@@ -1,28 +1,46 @@
 #!/usr/bin/env bash
 
+newline() {
+  printf "\n"
+}
+
+setup_homebrew() {
+  echo "Installing homebrew... 🍺"
+  newline
+
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  newline
+  sh -c "$(echo; echo 'eval \"$(/opt/homebrew/bin/brew shellenv)\"') >> /Users/samneely/.zprofile\""
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  newline
+  echo "homebrew installed, bundling... 🍻"
+  newline
+
+  brew bundle
+}
+
 install_ohmyzsh() {
   echo "Setting up oh-my-zsh... 🐚"
-  printf "\n"
+  newline
 
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-  printf "\n"
+  newline
   echo "Done setting up oh-my-zsh... ✅"
-}
-
-install_hub() {
-  echo "Installing hub... 🐙"
-  printf "\n"
-
-  sudo apt-get install hub
-
-  printf "\n"
-  echo "Done hub... ✅"
 }
 
 symlink_dotfiles() {
   echo "Symlinking dotfiles... 🖨️"
-  printf "\n"
+  newline
+
+  if [ -d ~/.config ]; then
+    echo "~/.config directory exists... 👍🏻"
+  else
+    echo "~/.config directory not found, creating it... 🗂️"
+  fi
+  newline
 
   ln -sfv ~/dotfiles/asdfrc ~/.asdfrc
   ln -sfv ~/dotfiles/aliases ~/.aliases
@@ -35,13 +53,13 @@ symlink_dotfiles() {
   ln -sfv ~/dotfiles/git/.git* ~/
   ln -sfv ~/dotfiles/zsh/.z* ~/
 
-  printf "\n"
+  newline
   echo "Done symlinking dotfiles... ✅"
 }
 
 setup_neovim() {
   echo "Installing neovim package manager... 📦"
-  printf "\n"
+  newline
 
   echo "Cloning packer..."
   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
@@ -51,10 +69,11 @@ setup_neovim() {
   echo "Running :PackerSync in neovim..."
   nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
-  printf "\n"
+  newline
   echo "Done setting up neovim... 👨🏻‍💻"
 }
 
+setup_homebrew
 symlink_dotfiles
 setup_neovim
 install_ohmyzsh
