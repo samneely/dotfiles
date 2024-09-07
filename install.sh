@@ -20,16 +20,6 @@ install_hub() {
   echo "Done hub... ✅"
 }
 
-change_gitconfig_for_spin() {
-  echo "Changing gitconfig for spin... 🌀"
-  printf "\n"
-
-  git config --global user.email "sam.neely@shopify.com"
-
-  printf "\n"
-  echo "Done changing gitconfig... ✅"
-}
-
 symlink_dotfiles() {
   echo "Symlinking dotfiles... 🖨️"
   printf "\n"
@@ -67,10 +57,4 @@ setup_neovim() {
 
 symlink_dotfiles
 setup_neovim
-
-if [ $SPIN ]; then
-  install_hub
-  change_gitconfig_for_spin
-else
-  install_ohmyzsh
-fi
+install_ohmyzsh

@@ -32,5 +32,5 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# Spin
-[ $SPIN ] && source /etc/zsh/zshrc.default.inc.zsh
+# fzf
+source <(fzf --zsh)
