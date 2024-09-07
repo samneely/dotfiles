@@ -31,6 +31,7 @@ brew "overmind"
 brew "pkg-config" # Manage compile and link flags for libraries
 brew "rabbitmq", restart_service: true
 brew "readline" # Library for command-line editing
+brew "rectangle" # Spectacle replacement for moving windows around
 brew "redis", restart_service: true
 brew "ripgrep"
 brew "stow"
@@ -49,10 +50,10 @@ cask "dash"
 cask "discord"
 cask "dropbox"
 cask "gifox"
+cask "google-drive"
 cask "iterm2"
 cask "ngrok"
 cask "postico"
 cask "rocket"
 cask "slack"
-cask "spectacle"
 cask "spotify"
