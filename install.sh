@@ -46,6 +46,7 @@ symlink_dotfiles() {
   ln -sfv ~/dotfiles/aliases ~/.aliases
   ln -sfv ~/dotfiles/bashrc ~/.bashrc
   ln -sfv ~/dotfiles/bash_profile ~/.bash_profile
+  ln -sfv ~/dotfiles/Brewfile ~/Brewfile
   ln -sfv ~/dotfiles/hub ~/.config/hub
   ln -sfv ~/dotfiles/rspec ~/.rspec
   ln -sfv ~/dotfiles/rubocop.yml ~/.rubocop.yml
