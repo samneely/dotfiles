@@ -1,7 +1,6 @@
 tap "1password/tap"
 tap "eddieantonio/eddieantonio"
 tap "homebrew/bundle"
-tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "puma/puma"
 
@@ -31,7 +30,6 @@ brew "overmind"
 brew "pkg-config" # Manage compile and link flags for libraries
 brew "rabbitmq", restart_service: true
 brew "readline" # Library for command-line editing
-brew "rectangle" # Spectacle replacement for moving windows around
 brew "redis", restart_service: true
 brew "ripgrep"
 brew "stow"
@@ -45,6 +43,7 @@ brew "zsh-completions"
 cask "1password"
 cask "1password-cli"
 cask "alfred"
+cask "google-chrome"
 cask "chromedriver"
 cask "dash"
 cask "discord"
@@ -54,6 +53,7 @@ cask "google-drive"
 cask "iterm2"
 cask "ngrok"
 cask "postico"
+cask "rectangle"
 cask "rocket"
 cask "slack"
 cask "spotify"
