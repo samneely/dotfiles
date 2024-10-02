@@ -8,10 +8,10 @@ setup_homebrew() {
   echo "Installing homebrew... 🍺"
   newline
 
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   newline
-  sh -c "$(echo; echo 'eval \"$(/opt/homebrew/bin/brew shellenv)\"') >> /Users/samneely/.zprofile\""
+  /bin/bash -c "$(echo; echo 'eval \"$(/opt/homebrew/bin/brew shellenv)\"') >> /Users/samneely/.zprofile"
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
   newline
@@ -73,7 +73,7 @@ setup_neovim() {
   echo "Done setting up neovim... 👨🏻‍💻"
 }
 
-setup_homebrew
 symlink_dotfiles
+setup_homebrew
 setup_neovim
 install_ohmyzsh
