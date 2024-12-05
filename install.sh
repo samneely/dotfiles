@@ -39,6 +39,7 @@ symlink_dotfiles() {
     echo "~/.config directory exists... 👍🏻"
   else
     echo "~/.config directory not found, creating it... 🗂️"
+    mkdir ~/.config
   fi
   newline
 
@@ -47,6 +48,7 @@ symlink_dotfiles() {
   ln -sfv ~/dotfiles/bashrc ~/.bashrc
   ln -sfv ~/dotfiles/bash_profile ~/.bash_profile
   ln -sfv ~/dotfiles/Brewfile ~/Brewfile
+  ln -sfv ~/dotfiles/bat_config ~/.config/bat/config
   ln -sfv ~/dotfiles/hub ~/.config/hub
   ln -sfv ~/dotfiles/rspec ~/.rspec
   ln -sfv ~/dotfiles/rubocop.yml ~/.rubocop.yml
