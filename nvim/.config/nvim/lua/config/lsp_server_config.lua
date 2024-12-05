@@ -86,5 +86,5 @@ require('lspconfig').solargraph.setup({
 require'lspconfig'.sorbet.setup({on_attach = on_attach})
 
 -- LSP / TypeScript
-require('lspconfig').tsserver.setup({on_attach = on_attach})
+require('lspconfig').ts_ls.setup({on_attach = on_attach})
 
