@@ -13,6 +13,7 @@ brew "coreutils" # GNU File, Shell, and Text utilities
 brew "diff-so-fancy" # Good-lookin' diffs with diff-highlight and more
 brew "git"
 brew "gnupg" # GNU Pretty Good Privacy (PGP) package
+brew "graphviz"
 brew "hivemind" # The mind to rule processes of your development environment
 brew "hub" # Add GitHub support to git on the command-line
 brew "eddieantonio/eddieantonio/imgcat" # It's like cat(1), but for images.
