@@ -53,6 +53,8 @@ require('packer').startup(function()
   use {'leafgarland/typescript-vim', ft = {'ts', 'tsx'}}
   ---- GraphQL
   use {'jparise/vim-graphql', ft = {'js', 'jsx', 'ts', 'tsx', 'graphql', 'gql'}}
+  ---- Golang
+  use 'fatih/vim-go'
   
   -- Testing
   use {
