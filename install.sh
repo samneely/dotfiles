@@ -52,6 +52,7 @@ symlink_dotfiles() {
   ln -sfv ~/dotfiles/hub ~/.config/hub
   ln -sfv ~/dotfiles/rspec ~/.rspec
   ln -sfv ~/dotfiles/rubocop.yml ~/.rubocop.yml
+  ln -sfv ~/dotfiles/tool-versions ~/.tool-versions
 
   ln -sfv ~/dotfiles/git/.git* ~/
   ln -sfv ~/dotfiles/zsh/.z* ~/
