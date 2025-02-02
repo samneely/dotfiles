@@ -88,3 +88,5 @@ require'lspconfig'.sorbet.setup({on_attach = on_attach})
 -- LSP / TypeScript
 require('lspconfig').ts_ls.setup({on_attach = on_attach})
 
+-- LSP / Golang
+require('lspconfig').gopls.setup({on_attach = on_attach})
