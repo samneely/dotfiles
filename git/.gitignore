@@ -1,6 +1,7 @@
 # Vim
 *.swp
 *.swo
+*.swn
 .vimrc
 Session.vim
 
