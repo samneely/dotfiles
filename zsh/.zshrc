@@ -37,6 +37,7 @@ export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 source <(fzf --zsh)
 
 # asdf
+export ASDF_DATA_DIR=$HOME/.asdf
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # Work specific configurations
