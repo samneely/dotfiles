@@ -1,14 +1,23 @@
--- Load .vimrc
-vim.cmd([[runtime .vimrc]])
+-- Set <space> as the leader key
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
--- Neovim specific settings
-vim.o.icm = 'split'
+-- Set to true if you have a Nerd Font installed and selected in the terminal
+vim.g.have_nerd_font = false
 
-require('plugins')
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
+-- [[ Setting options ]]
+require 'options'
 
-vim.o.fileencoding = "utf-8"
-vim.o.guifont = "Hack Regular Nerd Font Complete Mono:h14"
--- require('nvim-web-devicons').get_icons()
+-- [[ Basic Keymaps ]]
+require 'keymaps'
 
-require('work-settings')
+-- [[ Install `lazy.nvim` plugin manager ]]
+require 'lazy-bootstrap'
+
+-- [[ Configure and install plugins ]]
+require 'lazy-plugins'
+
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=2 sts=2 sw=2 et
