@@ -190,6 +190,8 @@ return {
         -- ts_ls = {},
         --
 
+        buildifier = {},
+        hadolint = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -204,8 +206,11 @@ return {
             },
           },
         },
+        pylint = {},
         rubocop = {},
-        ruby_lsp = {},
+        -- ruby_lsp = {},
+        shellcheck = {},
+        solargraph = {},
       }
 
       -- Ensure the servers and tools above are installed
