@@ -62,16 +62,16 @@ symlink_dotfiles() {
 }
 
 setup_neovim() {
-  echo "Installing neovim package manager... 📦"
+  if [ -d ~/neovim-config ]; then
+    echo "~/neovim-config directory exists..."
+  else
+    echo "~/neovim-config directory not found, cloning it... 🐙"
+    git clone git@github.com:samneely/neovim-config.git ~/neovim-config
+  fi
   newline
 
-  echo "Cloning packer..."
-  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-  cp -Rsfv ~/dotfiles/nvim/.config/nvim ~/.config/nvim
-
-  echo "Running :PackerSync in neovim..."
-  nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+  echo "Symlinking neovim configuration... 🗃️"
+  ln -sfv ~/neovim-config ~/.config/nvim
 
   newline
   echo "Done setting up neovim... 👨🏻‍💻"
