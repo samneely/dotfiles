@@ -62,8 +62,16 @@ symlink_dotfiles() {
 }
 
 setup_neovim() {
+  if [ -d ~/neovim-config ]; then
+    echo "~/neovim-config directory exists..."
+  else
+    echo "~/neovim-config directory not found, cloning it... 🐙"
+    git clone git@github.com:samneely/neovim-config.git ~/neovim-config
+  fi
+  newline
+
   echo "Symlinking neovim configuration... 🗃️"
-  ln -sfv ~/dotfiles/nvim/.config/nvim ~/.config/nvim
+  ln -sfv ~/neovim-config ~/.config/nvim
 
   newline
   echo "Done setting up neovim... 👨🏻‍💻"
