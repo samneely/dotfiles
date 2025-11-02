@@ -51,3 +51,5 @@
 	enabled = true
 [hub]
 	protocol = ssh
+[init]
+	defaultBranch = main
