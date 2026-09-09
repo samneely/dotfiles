@@ -50,6 +50,7 @@ symlink_dotfiles() {
   ln -sfv ~/dotfiles/Brewfile ~/Brewfile
   ln -sfv ~/dotfiles/bat_config ~/.config/bat/config
   ln -sfv ~/dotfiles/hub ~/.config/hub
+  ln -sfv ~/dotfiles/ghostty_config ~/.config/ghostty/config
   ln -sfv ~/dotfiles/rspec ~/.rspec
   ln -sfv ~/dotfiles/rubocop.yml ~/.rubocop.yml
   ln -sfv ~/dotfiles/tool-versions ~/.tool-versions
