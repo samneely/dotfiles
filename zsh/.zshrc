@@ -31,17 +31,18 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Golang variables
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-
 # fzf
 source <(fzf --zsh)
 
 # asdf
 export ASDF_DATA_DIR=$HOME/.asdf
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# Golang variables
+. ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOPATH/bin
+# export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
 # Work specific configurations
 [ -f ~/.workrc ] && source ~/.workrc
