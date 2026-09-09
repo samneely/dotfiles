@@ -17,6 +17,9 @@ export EDITOR=nvim
 # PATH for Homebrew
 export PATH="$PATH:/usr/local/sbin"
 
+# PATH for local binaries, like claude
+export PATH="$PATH:$HOME/.local/bin"
+
 # PATH for Postgres
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
